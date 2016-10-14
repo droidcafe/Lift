@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "122058818295",
+    "firebase_url": "https://lyff-94724.firebaseio.com",
+    "project_id": "lyff-94724",
+    "storage_bucket": "lyff-94724.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:122058818295:android:4bc56c69f0cf6e3a",
+        "android_client_info": {
+          "package_name": "nir.droid.lift"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "122058818295-f481ffikomvqcidshcrkmp7gnvusmodu.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "nir.droid.lift",
+            "certificate_hash": "310FC54CB71EFDB16E75AEEF6DBC0538DFA5E405"
+          }
+        },
+        {
+          "client_id": "122058818295-i5lbvc8l828e6iv1qeuse7gn639kgrum.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBydlK9nvCJ_Noo64eB97Xru7e-35YNG1k"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "122058818295-i5lbvc8l828e6iv1qeuse7gn639kgrum.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

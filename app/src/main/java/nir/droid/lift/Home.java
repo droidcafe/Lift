@@ -11,6 +11,7 @@ import android.view.Menu;
 import android.view.MenuItem;
 
 import nir.droid.lift.Location.Location;
+import nir.droid.lift.Location.Map.Map;
 import nir.droid.lift.Retro.tuts.MovieDb.TopRated;
 import nir.droid.lift.Retro.tuts.MovieDb.TopRated_TV;
 import nir.droid.lift.Retro.tuts.RetroActivity1;
@@ -32,6 +33,7 @@ public class Home extends AppCompatActivity implements View.OnClickListener {
         findViewById(R.id.fourth).setOnClickListener(this);
         findViewById(R.id.fifth).setOnClickListener(this);
         findViewById(R.id.sixth).setOnClickListener(this);
+        findViewById(R.id.seventh).setOnClickListener(this);
 
         FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
         fab.setOnClickListener(new View.OnClickListener() {
@@ -89,6 +91,9 @@ public class Home extends AppCompatActivity implements View.OnClickListener {
 
             case R.id.sixth:
                 startActivity(new Intent(this, Location.class));
+                break;
+            case R.id.seventh:
+                startActivity(new Intent(this, Map.class));
                 break;
         }
     }

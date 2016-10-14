@@ -15,6 +15,7 @@ import retrofit2.converter.gson.GsonConverterFactory;
  */
 public class ApiClient {
 
+    public final static String KEY_LOCATION_CHANGED = "location_changed";
 
     public static Retrofit retrofit = null;
     private static GoogleApiClient mGoogleApiClient = null;

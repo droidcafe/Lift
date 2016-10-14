@@ -10,7 +10,7 @@ public class Global {
     public static final String  NODE_PORT = "3000";
     public static final String  BASE_URL = HOST_URL +":" +NODE_PORT;
 
-//    public static final String  ;
+    public static final String  SHARED_PREF = "lyff_preference" ;
 
     public static final int RESOLVE_GOOGLE_API_ERROR = 1001;
     public static final int REQUEST_LOCATION_ERROR= 1002;

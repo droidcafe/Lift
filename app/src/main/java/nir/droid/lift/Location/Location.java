@@ -1,6 +1,7 @@
 package nir.droid.lift.Location;
 
 import android.app.Activity;
+import android.app.PendingIntent;
 import android.content.Context;
 import android.content.Intent;
 import android.content.IntentSender;
@@ -176,8 +177,12 @@ public class Location extends AppCompatActivity implements GoogleApiClient.Conne
     }
 
     protected void startLocationUpdate(LocationRequest mLocationRequest){
-        LocationServices.FusedLocationApi.requestLocationUpdates(
-                mGoogleApiClient, mLocationRequest, this);
+//        LocationServices.FusedLocationApi.requestLocationUpdates(
+//                mGoogleApiClient, mLocationRequest, this);
+
+        Intent intervalIntent = new Intent(this, LocationService.class);
+        PendingIntent intervalPendingIntent = PendingIntent.getService(this, 1,intervalIntent, PendingIntent.FLAG_CANCEL_CURRENT);
+        LocationServices.FusedLocationApi.requestLocationUpdates(mGoogleApiClient,mLocationRequest,intervalPendingIntent);
     }
 
     @Override

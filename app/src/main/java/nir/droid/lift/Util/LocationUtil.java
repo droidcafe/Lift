@@ -5,6 +5,7 @@ import android.app.Activity;
 import android.content.Context;
 import android.content.pm.PackageManager;
 
+import android.location.Location;
 import android.support.v4.app.ActivityCompat;
 
 import com.google.android.gms.common.api.GoogleApiClient;
@@ -14,6 +15,9 @@ import com.google.android.gms.location.LocationRequest;
 import com.google.android.gms.location.LocationServices;
 import com.google.android.gms.location.LocationSettingsRequest;
 import com.google.android.gms.location.LocationSettingsResult;
+import com.google.android.gms.maps.model.LatLng;
+
+
 
 /**
  * Created by droidcafe on 10/13/2016.
@@ -29,9 +33,9 @@ public class LocationUtil {
         return mLocationRequest;
     }
 
-    public static void startLocationUpdates(Context context,Activity activity,LocationRequest mLocationRequest,
+    public static void startLocationUpdates(Context context, Activity activity, LocationRequest mLocationRequest,
                                             GoogleApiClient mGoogleApiClient, LocationListener mListener) {
-        if(checkPermission(context)){
+        if (checkPermission(context)) {
             handlePermission(activity);
 
             return;
@@ -40,7 +44,7 @@ public class LocationUtil {
                 mGoogleApiClient, mLocationRequest, mListener);
     }
 
-    public static  boolean checkPermission(Context context){
+    public static boolean checkPermission(Context context) {
 
         return ActivityCompat.checkSelfPermission(context, Manifest.permission.ACCESS_FINE_LOCATION) != PackageManager.PERMISSION_GRANTED
                 && ActivityCompat.checkSelfPermission(context, Manifest.permission.ACCESS_COARSE_LOCATION) != PackageManager.PERMISSION_GRANTED;
@@ -63,5 +67,19 @@ public class LocationUtil {
                         builder.build());
 
         return result;
+    }
+
+    public static Location getCurrentLocation(GoogleApiClient mGoogleApiClient) {
+
+       Location mLastLocation = LocationServices.FusedLocationApi.getLastLocation(mGoogleApiClient);
+
+        if (mLastLocation != null) {
+            return mLastLocation;
+        } else {
+            Log.d("lo", "location null");
+            return null;
+        }
+
+
     }
 }

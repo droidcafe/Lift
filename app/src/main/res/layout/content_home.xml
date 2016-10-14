@@ -55,4 +55,11 @@
         android:layout_below="@id/fifth"
         android:id="@+id/sixth"/>
 
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Map"
+        android:layout_below="@id/sixth"
+        android:id="@+id/seventh"/>
+
 </RelativeLayout>

@@ -1,5 +1,6 @@
 package nir.droid.lift.Network;
 
+import nir.droid.lift.Network.APIResponse.LocationResponse;
 import nir.droid.lift.Network.APIResponse.UserResponse;
 import okhttp3.RequestBody;
 import retrofit2.Call;
@@ -14,6 +15,13 @@ import retrofit2.http.Part;
  * Created by droidcafe on 10/12/2016.
  */
 public interface RestApiInterface {
+
+    @FormUrlEncoded
+    @POST("/location")
+    Call<LocationResponse>  updateLocation(
+            @Field("user_id") int user_id,
+            @Field("latitude") String latitude,
+            @Field("longitude") String longitude );
 
     @FormUrlEncoded
     @POST("/register")
