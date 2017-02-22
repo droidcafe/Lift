@@ -15,7 +15,7 @@ public class Lyff extends Application {
     public void onCreate() {
         super.onCreate();
 
-        Stetho.initializeWithDefaults(this);
+
         sContext = getApplicationContext();
     }
 

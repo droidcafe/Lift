@@ -8,12 +8,6 @@
     tools:context=".User.Portal.Register"
     tools:showIn="@layout/activity_register">
 
-    <ImageView
-        android:id="@+id/loginback"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:scaleType="centerCrop"
-        android:src="@drawable/front2" />
 
     <RelativeLayout
         android:id="@+id/relative"
